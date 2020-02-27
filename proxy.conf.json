@@ -1,0 +1,11 @@
+{  
+    "/api/*": {  
+       "target": "http://eventmanagement.glaciertechnology.in",  
+       "secure": false,  
+       "logLevel": "debug",
+       "pathRewrite": {
+         "^/api": ""
+       },
+       "changeOrigin": true  
+    }  
+ }  

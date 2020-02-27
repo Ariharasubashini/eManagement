@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <h3>Account Information</h3>
+        </div>
+        <div class="col-md-4">
+            <form class="example-form">
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email" disabled value="navaneedhan.law@gmail.com">
+            </mat-form-field>
+            </form>
+        </div>
+        <div class="col-md-3">
+            <div class="example-small-box mat-elevation-z4">
+                Profile Picture
+              </div>
+        </div>
+    </div>
+
+    <mat-tab-group >
+        <mat-tab label="Profile Information"><app-account></app-account></mat-tab>
+        <mat-tab label="Address"><app-address></app-address></mat-tab>
+        <mat-tab label="Change Password"><app-changepwd></app-changepwd></mat-tab>
+       
+    </mat-tab-group>
+
+</div>

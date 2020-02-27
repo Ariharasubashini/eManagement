@@ -1,0 +1,37 @@
+h4
+{
+   
+    font-family: Verdana;
+}
+
+ .container
+{
+    padding: 50px;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 50%;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+  .mat-raised-button
+  {
+      margin-top: 25px;
+  }

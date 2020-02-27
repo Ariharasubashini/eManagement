@@ -1,0 +1,37 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <span>GT Event</span>
+        <span class="example-spacer"></span>
+        
+        <mat-chip-list aria-label="Fish selection">
+          <mat-chip routerLink="/eventHome">Home</mat-chip>
+        </mat-chip-list>
+        
+        <mat-chip-list aria-label="Fish selection">
+          <mat-chip routerLink="/createevent">Create Event</mat-chip>
+        </mat-chip-list>
+        
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/profile">
+            <mat-icon>dialpad</mat-icon>
+            <span>My Profile</span>
+          </button>
+         
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+      </mat-toolbar-row>
+      
+    </mat-toolbar>
+      <!-- Add Content Here -->
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

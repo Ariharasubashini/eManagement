@@ -1,0 +1,99 @@
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+    <mat-card class="shipping-card">
+      <h3>Payment Details</h3>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+              <mat-form-field appearance="fill">
+                  <mat-label>Select Country</mat-label>
+                  <mat-select>
+                    <mat-option value="option">India</mat-option>
+                  </mat-select>
+                </mat-form-field>
+          </div>
+          <div class="col">
+              <mat-form-field appearance="fill">
+                  <mat-label>Select Currency</mat-label>
+                  <mat-select>
+                    <mat-option value="option">Rupees</mat-option>
+                  </mat-select>
+                </mat-form-field>
+          </div>
+        </div>
+        <p>Payment Gateway is already integrated. Please provide your bank details for payout</p>
+        <h3>Bank Details</h3>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Account Holder Name" formControlName="firstName">
+              <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
+                Account holder name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Account Number" formControlName="lastName">
+              <mat-error *ngIf="addressForm.controls['lastName'].hasError('required')">
+                Account number is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Bank Name" formControlName="firstName">
+              <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
+                Bank name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="IFS Code" formControlName="lastName">
+              <mat-error *ngIf="addressForm.controls['lastName'].hasError('required')">
+                IFS Code is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Branch Name" formControlName="firstName">
+              <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
+                Branch name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-select placeholder="Secect Account Type" formControlName="state">
+                <mat-option *ngFor="let state of states" [value]="state.abbreviation">
+                  {{ state.name }}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="addressForm.controls['state'].hasError('required')">
+                Account Type is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Address" formControlName="firstName">
+            </mat-form-field>
+          </div>
+          
+        </div>
+  
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  

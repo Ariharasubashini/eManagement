@@ -1,0 +1,65 @@
+.container
+{
+    padding: 20px;
+    
+}
+
+.mat-form-field
+{
+    margin-top: 15px;
+}
+
+.form-group.hidden {
+    width: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+  }
+  .custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+  }
+  .custom-day.focused {
+    background-color: #e6e6e6;
+  }
+  .custom-day.range, .custom-day:hover {
+    background-color: rgb(2, 117, 216);
+    color: white;
+  }
+  .custom-day.faded {
+    background-color: rgba(2, 117, 216, 0.5);
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 50%;
+
+  }
+
+  .example-half {
+    width: 24%;
+    margin-right: 20px;
+    
+  }
+
+
+
+
+
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 20px;
+    padding-top: 20px;
+  }
+  
+  .mat-raised-button
+  {
+      margin-top: 30px;
+  }

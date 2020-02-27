@@ -1,0 +1,37 @@
+h3
+{
+    font-weight: 580;
+    font-family: Verdana;
+}
+
+ .container
+{
+    padding: 50px;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 350px;
+    width: 100%;
+    padding-top: 20px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .example-small-box, .example-large-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .example-small-box {
+    height: 140px;
+    width: 140px;
+  }
+  
+  

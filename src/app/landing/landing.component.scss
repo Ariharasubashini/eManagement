@@ -1,0 +1,62 @@
+.bgImg{
+  min-height:300px;
+  height:100%;
+  width:100%;
+}
+
+.contentAlign{
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.09);
+  display: inline-block;
+  margin-bottom: 0;
+  background: #ffffff;
+  padding: 60px 20px;
+  width: 100%;
+  margin-top: 10%;
+
+}
+
+.company-image{
+  background-image: url('../../assets/logo.jfif');
+  background-size: cover;
+  height: 70px;
+    width: 130px;
+    border-radius:50%;
+}
+
+.filler {
+  flex: 1 1 auto;
+}
+.gap {
+  margin-right: 10px;
+}
+
+.marginLeft{
+  margin-left:35%;
+}
+
+.form-full-width{
+  width: 80%;
+}
+
+.fullForm{
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.spinner-margin {
+    margin: 0 10px;
+    display:inline;
+  }
+  .mat-progress-spinner svg {
+    margin-top:-5px;
+  }
+
+  .resend{
+    text-align: right;
+    width: 100%;
+    padding-right: 10%;
+    text-decoration: underline;
+    cursor: pointer;
+    color: cornflowerblue;
+  }

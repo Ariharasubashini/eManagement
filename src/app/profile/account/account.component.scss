@@ -1,0 +1,39 @@
+h3
+{
+    font-weight: 580;
+    font-family: Verdana;
+}
+
+ .container
+{
+    padding: 50px;
+}
+
+ .mat-form-field {
+    margin-right: 30px;
+  }
+
+  .example-form {
+    min-width: 200px;
+    max-width: 200px;
+    width: 100%;
+    padding-top: 20px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 20px;
+    padding-top: 20px;
+  }
+  
+  .mat-raised-button
+  {
+      margin-top: 25px;
+  }

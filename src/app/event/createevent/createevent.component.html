@@ -1,0 +1,108 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button>
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Basic Event Info</ng-template>
+
+        <div class="container">
+            <h3>Event Details</h3>
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Event Title</mat-label>
+                <input matInput >
+              </mat-form-field>
+           <p>
+              <mat-form-field>
+                <input matInput [matDatepicker]="dp" placeholder="Start Date" [formControl]="date">
+                <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                <mat-datepicker #dp></mat-datepicker>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field>
+                <input matInput [matDatepicker]="mp" placeholder="End Date" [formControl]="date">
+                <mat-datepicker-toggle matSuffix [for]="mp"></mat-datepicker-toggle>
+                <mat-datepicker #mp></mat-datepicker>
+              </mat-form-field>
+            </p>
+
+            <p>
+              <mat-form-field class="example-full-width">
+                <mat-label>Description</mat-label>
+                <textarea matInput placeholder="Ex. Celebrities Participating"></textarea>
+              </mat-form-field>
+              
+            </p>
+            <p>
+              <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">Private Event</mat-radio-button>
+                <mat-radio-button value="2">Public Event</mat-radio-button>
+              </mat-radio-group>
+            </p>
+        </div>
+
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Venue Details</ng-template>
+
+        <div class="container">
+        <h3>Location</h3>
+
+        
+    
+          <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="Venue Name"></textarea>
+          </mat-form-field>
+        <p>
+          <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="Address "></textarea>
+          </mat-form-field>
+        </p>
+        <mat-form-field class="example-half">
+          <textarea matInput placeholder="City"></textarea>
+        </mat-form-field><mat-form-field class="example-half">
+          <textarea matInput placeholder="State"></textarea>
+        </mat-form-field>
+        <p>
+        <mat-form-field class="example-half">
+          <textarea matInput placeholder="Country"></textarea>
+        </mat-form-field><mat-form-field class="example-half">
+          <textarea matInput placeholder="Pin Code"></textarea>
+        </mat-form-field>
+        </p>
+         </div>
+        
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+
+      <h3>Event Type</h3>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">Tickets</mat-radio-button>
+        <mat-radio-button value="2">Registration</mat-radio-button>
+      </mat-radio-group>
+
+      <p>
+      <button mat-raised-button color="primary">Confirm & Save </button>
+    </p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+  

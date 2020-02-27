@@ -1,0 +1,73 @@
+<mat-toolbar color="primary">
+  <span class = "gap company-image"></span>
+  <div class="text-center marginLeft">Register Event</div>
+  <span class = "filler"></span>
+  <div class='text-center'> <button mat-raised-button color="accent" (click)='changeView()'>{{headerButtonText}}</button></div>
+</mat-toolbar>
+<div class="row">
+    <div class="col-md-4 "></div>
+    <div class="col-md-4 contentAlign">
+      <form [formGroup]="loginForm" *ngIf='!isSignup && !isOTPPage' class="fullForm">
+        <h3 class='text-center'>Sign In</h3>
+        <mat-form-field class="form-full-width ml-5">
+          <mat-label>Email id</mat-label>
+          <input matInput placeholder="Enter E-Mail" [formControl]="email">
+          <mat-error>Please enter a valid email address</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-full-width ml-5">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Enter Password" [formControl]="password" type="password">
+          <mat-error>Please enter a valid password</mat-error>
+        </mat-form-field>
+        <div class='mt-5 text-center'> <button mat-raised-button color="primary" [disabled]="!(password.valid && email.valid)" (click)='callLogin()'>Submit</button></div>
+      </form>
+
+      <form [formGroup]="signUpForm" *ngIf='isSignup && !isOTPPage' class="fullForm">
+        <h1 class='text-center'>Sign Up</h1>
+        <mat-form-field class="form-full-width ml-5">
+          <mat-label>Full Name</mat-label>
+          <input matInput placeholder="Enter fullName" [formControl]="fullName">
+          <mat-error>Please enter name</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-full-width ml-5">
+          <mat-label>Email Id</mat-label>
+          <input matInput placeholder="Enter E-Mail" [formControl]="semail">
+          <mat-error>Please enter a valid email address</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-full-width ml-5">
+          <mat-label>Mobile Number</mat-label>
+          <input matInput placeholder="Enter mobileNumber" [formControl]="mobileNumber">
+          <mat-error>Please enter a valid mobile number</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-full-width ml-5">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Enter Password" [formControl]="spassword" type="password">
+          <mat-error>Please enter a valid password</mat-error>
+        </mat-form-field>
+        
+        <div class='mt-5 text-center'> 
+          <button mat-raised-button color="primary" [disabled]="!(spassword.valid && semail.valid && fullName.valid && mobileNumber.valid)" (click)="callSignUp()">Submit</button>
+        </div>
+        
+      </form>
+
+      <form [formGroup]="OTPForm" *ngIf='!isSignup && isOTPPage' class="fullForm">
+        <h3 class='text-center'>Enter OTP for Activation</h3>
+        <mat-form-field class="form-full-width ml-5">
+          <mat-label>Mobile OTP</mat-label>
+          <input matInput placeholder="Enter Mobile OTP" [formControl]="motp" type="password"> 
+          <mat-error>Please enter a Mobile OTP</mat-error>
+          
+        </mat-form-field>
+        <div class='resend' (click)='getMobileOTP()'>Resend</div>
+        <mat-form-field class="form-full-width ml-5">
+          <mat-label>E-Mail OTP</mat-label>
+          <input matInput placeholder="Enter E-Mail OTP" [formControl]="eotp" type="password">
+          <mat-error>Please enter a E-Mail OTP</mat-error>
+        </mat-form-field>
+        <div class='resend' (click)='getEmailOTP()'>Resend</div>
+        <div class='mt-5 text-center'> <button mat-raised-button color="primary" [disabled]="!(motp.valid && eotp.valid)" (click)='validateOTP()'>Proceed</button></div>
+      </form>
+    </div>
+    <div class="col-md-4 "></div>
+</div>
